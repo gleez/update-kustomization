@@ -1,9 +1,10 @@
-FROM line/kubectl-kustomize:1.20.2-3.9.1
+FROM line/kubectl-kustomize:latest
 
 COPY entrypoint.sh /bin/
 RUN chmod +x /bin/entrypoint.sh
 
 ENV SSH_KEY=
+ENV SSH_CONFIG=
 ENV IMAGES=
 ENV IMAGE_TAG=
 ENV MANIFEST_HOST=
